@@ -15,8 +15,8 @@ let acceleration = 0.95;
 const gameLoss = document.createElement("h1");
 const up = document.getElementById("moveup"); // Grabbing the up button for mobile devices
 const down = document.getElementById("movedown"); // Grabbing the down button for mobile devices
-const left = document.getElementById("moveleft"); // Grabbing the left button for mobile devices
-const right = document.getElementById("moveright"); // Grabbing the right button for mobile devices
+const right = document.getElementById("moveleft"); // Grabbing the left button for mobile devices
+const left = document.getElementById("moveright"); // Grabbing the right button for mobile devices
 
 // Function to create a hundred divs. 
 function createGrid() {

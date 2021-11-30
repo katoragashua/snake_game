@@ -112,6 +112,7 @@ small {
         height: 200px;
         margin: 0px auto;
         border: 1px solid;
+        border-radius: 4px;
     }
 
     .gridCells {
@@ -137,8 +138,11 @@ small {
     }
 
     #mobileControls> button {
-        padding: .8rem;
+        padding: .6rem 1.5rem;
         cursor: pointer;
+        border: 1px solid black;
+        box-shadow: 1px 2px 5px inset;
+        border-radius: 5px;
     }
 
 }
