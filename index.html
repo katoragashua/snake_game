@@ -16,14 +16,29 @@
   </head>
   <body>
     <div class="container">
-      <div class="icon"><h1>Snake Game</h1><img src="icons8-snake-80.png" alt=""></div>
+      <div class="icon">
+        <h1>Snake Game</h1>
+        <img src="icons8-snake-80.png" alt="" />
+      </div>
       <button id="start">Start/Reset</button>
       <h3>Score =<span id="score"> 0</span></h3>
       <div class="grid"></div>
-    <!-- An overlay for displaying game over -->
+      <!-- An overlay for displaying game over -->
       <div class="overlay"></div>
+      <!-- Crediting icons8 for snake logo -->
+      <small
+        ><a target="_blank" href="https://icons8.com/icon/VFVHYXMo8IGJ/snake"
+          >Snake</a
+        >
+        icon by <a target="_blank" href="https://icons8.com">Icons8</a></small
+      >
+      <!-- Creating controls for mobile -->
+      <div id="mobileControls" >
+        <button id="moveup">UP</button><br /><br />
+        <button id="moveleft">LEFT</button>
+        <button id="moveright">RIGHT</button><br /><br />
+        <button id="movedown">DOWN</button>
+      </div>
     </div>
-    <!-- Crediting icons8 for snake logo -->
-    <small><a target="_blank" href="https://icons8.com/icon/VFVHYXMo8IGJ/snake">Snake</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></small> 
   </body>
 </html>

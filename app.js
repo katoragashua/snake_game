@@ -1,6 +1,6 @@
-const startBtn = document.getElementById("start");
-const gameScore = document.getElementById("score");
-const grid = document.querySelector(".grid");
+const startBtn = document.getElementById("start"); //Grabbing the start button
+const gameScore = document.getElementById("score"); //Grabbing the game score
+const grid = document.querySelector(".grid");  //Grabbing the snake grid
 const overlay = document.querySelector(".overlay"); //Creating an overlay for when game is over.
 let cellsArray = []; //Creating and empty array to put all gridCells.
 let snake = [0,1,2]; //Creating an array for the initial position of our snake (The idea is we want our snake to have an initial position of indexes 0, 1, and 2 in the cellsArray).
@@ -13,6 +13,10 @@ let initialSpeed = 1000;
 let timer = 0;
 let acceleration = 0.95;
 const gameLoss = document.createElement("h1");
+const up = document.getElementById("moveup"); // Grabbing the up button for mobile devices
+const down = document.getElementById("movedown"); // Grabbing the down button for mobile devices
+const left = document.getElementById("moveleft"); // Grabbing the left button for mobile devices
+const right = document.getElementById("moveright"); // Grabbing the right button for mobile devices
 
 // Function to create a hundred divs. 
 function createGrid() {
@@ -143,3 +147,24 @@ function randomColor() {
 setInterval(()=> {
     grid.style.background = randomColor()
 }, 4000)
+
+// Enabling buttons for mobile devices
+function mobileDirection() {
+    right.addEventListener("click", function() {
+        direction = +1;
+    });
+
+    left.addEventListener("click", function() {
+        direction = -1;
+    });
+
+    down.addEventListener("click", function() {
+        direction = +gridWidth;
+    });
+
+    up.addEventListener("click", function() {
+        direction = -gridWidth;
+    });
+}
+
+mobileDirection()

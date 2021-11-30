@@ -1,11 +1,15 @@
 html,
 body {
-    margin: 10px;
-    padding: 10px;
+    margin: 0;
+    padding: 1rem;
     text-align: center;
     color: darkslategray;
     font-family: 'Press Start 2P', cursive;
     font-weight: 700;
+}
+
+.container {
+    padding: 0.5rem;
 }
 
 .grid {
@@ -69,9 +73,13 @@ body {
 }
 
 small {
-    text-align: left;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: calibri, 'Trebuchet MS', sans-serif;
 }
+
+#mobileControls {
+        margin-top: 1rem;
+        display: none;
+    }
 
 /* seletions {
     font-family: 'Caveat', cursive;
@@ -82,3 +90,54 @@ small {
 
     font-family: 'Press Start 2P', cursive;
 } */
+
+@media screen and (max-width : 600px) {
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    } 
+
+    .grid {
+        border-radius: 2px;
+        box-shadow: .2em .2em .2em grey;
+        width: 200px;
+        height: 200px;
+        margin: 0px auto;
+        border: 1px solid;
+    }
+
+    .gridCells {
+        width: 20px;
+        height: 20px;
+    }
+
+    .overlay {
+        max-width: 50%;
+        max-height: 20%;
+        margin: 0 auto;
+        border-radius: 1rem;
+        font-size: 1rem;
+    }
+
+    .snake {
+        border-radius: 5px;
+    }
+
+    #mobileControls {
+        margin-top: 1rem;
+        display: block;
+    }
+
+    #mobileControls> button {
+        padding: .8rem;
+        cursor: pointer;
+    }
+
+}
